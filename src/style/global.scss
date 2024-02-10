@@ -1,0 +1,36 @@
+@import "section";
+@import "navbar";
+@import "abot";
+@import "skills";
+@import "slider";
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    width: 1440px;
+    margin: 0 auto;
+    background-color:#2b2929;
+    font-family: 'Roboto';
+    font-size: 20px;
+    
+}
+
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

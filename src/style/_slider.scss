@@ -1,0 +1,49 @@
+.back {
+    background-image: url("../assets/laptop.png");
+    width: 471px;
+    height: 350px;
+    background-repeat: no-repeat;
+    display: flex;
+    border: 1px solid white;
+    margin: 0 auto;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 100px;
+
+    &:hover {
+        border: 1px solid rgb(0, 255, 0);
+        transition: 0.3s ease-in-out;
+        div{
+            opacity: 1;
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    div {
+        display: flex;
+        width: 470px;
+        height: 50px;
+        border-radius:0px 0px 12px 12px;
+        background-color: #4c4c4c97;
+        margin-top: 298px;
+        opacity: 0;
+
+        h3 {
+            margin: 7px 0px 19px 32px;
+        }
+
+        a {
+            margin-left: 100px;
+            padding-top: 10px;
+            color: rgb(0, 255, 0);
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.projects{
+    margin: 105px 0px 82px 141px;
+    color: rgb(0, 255, 0);
+    font-size: 40px;
+}

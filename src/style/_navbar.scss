@@ -1,0 +1,41 @@
+.navbar-container {}
+
+.navbar {
+    display: flex;
+}
+
+.highlight{
+    color: #F2F2F2;
+}
+
+.navbar-list {
+    margin: 38px 0px 14px 237px;
+    width: 330px;
+    justify-content: space-between;
+    display: flex;
+
+    a:hover{
+        color: rgb(0, 255, 0);
+    }
+}
+
+.navbar-h1 {
+    margin-top: 38px;
+    margin-left: 95px;
+    text-wrap: nowrap;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Roboto;
+    text-transform: uppercase;
+    color: #828282;
+}
+
+.nav-logos {
+    width: 400px;
+    margin: 38px 0px 0px 163px;
+    justify-content: space-around;
+    display: flex;
+
+    a:hover{
+        color: rgb(0, 255, 0);
+    }
+}

@@ -1,0 +1,78 @@
+.sec-container {
+    margin: 223px 0px 0px 149px;
+    display: flex;
+    h2 {
+        margin-bottom: 21px;
+    }
+}
+
+.alpha{
+    display: flex;
+}
+
+.svges {
+    display: flex;
+    margin: 100px 174px 0px 400px;
+    right: 207px;
+    width: 545px;
+    height: 545px;
+    border-radius: 100%;
+    border: 1px solid rgb(58, 54, 54);
+    
+}
+
+.nodejs {
+    margin: 58px 0px 0px 15px;
+    border: none;
+    
+}
+
+.oop{
+    color: #F2F2F2;
+
+    h3{
+        margin-top: 12px;
+    }
+}
+
+.typescript {
+    margin-top: 383px;
+    margin-left: 320px;
+
+}
+
+.logo {
+    margin-top: 383px;
+    margin-left: -485px;
+}
+
+.next {
+    margin: 60px 21px 0px 325px;
+    
+}
+
+.svges {
+    animation: rotate 8s linear infinite;
+    
+}
+
+@keyframes svgrotate {
+    0% {
+        transform:rotateZ(0deg);
+    }
+
+    100%{
+        transform:rotateZ(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
