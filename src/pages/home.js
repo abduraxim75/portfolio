@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from '../components/navbar';
 import Section from '../components/section';
 import About from './about';
 import Skills from '../components/skills';
@@ -7,8 +6,7 @@ import Slider from '../components/carousel';
 
 const Home = () => {
     return (
-        <div>
-            <Navbar />
+        <div className='home-container'>
             <Section />
             <About/>
             <Skills/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // Import NavLink instead of Link
 
 const Navbar = () => {
     return (
@@ -10,25 +10,28 @@ const Navbar = () => {
                 </h1>
                 <ul className='navbar-list'>
                     <li>
-                        <Link to="/about">About</Link>
+                        <NavLink exact to='/' activeClassName='active'>Home</NavLink> {/* Use NavLink with activeClassName */}
                     </li>
                     <li>
-                        <Link to="/skills">Skills</Link>
+                        <NavLink to="/about" activeClassName='active'>About</NavLink> {/* Use NavLink with activeClassName */}
                     </li>
                     <li>
-                        <Link to="/projects">Projects</Link>
+                        <NavLink to="/skills" activeClassName='active'>Skills</NavLink> {/* Use NavLink with activeClassName */}
+                    </li>
+                    <li>
+                        <NavLink to="/projects" activeClassName='active'>Projects</NavLink> {/* Use NavLink with activeClassName */}
                     </li>
                 </ul>
                 <div className='nav-logo-bar'>
                     <ul className='nav-logos'>
                         <li>
-                            <a target='_blank' href='https://www.linkedin.com/in/adm-abbasap-b668b125b'>Linkedin</a>
+                            <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/adm-abbasap-b668b125b'>Linkedin</a>
                         </li>
                         <li>
-                            <a target='_blank' href='https://github.com/abduraxim75'>Github</a>
+                            <a target='_blank' rel="noopener noreferrer" href='https://github.com/abduraxim75'>Github</a>
                         </li>
                         <li>
-                            <a target='_blank' href='https://admabbasap@gmail.com'>Contact Me</a>
+                            <a target='_blank' rel="noopener noreferrer" href='mailto:admabbasap@gmail.com'>Contact Me</a>
                         </li>
                     </ul>
                 </div>

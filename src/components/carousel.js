@@ -1,8 +1,13 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import "swiper/css/autoplay"
-
-// Import Swiper styles
+import "swiper/css";
+import "swiper/css/autoplay";
+import { Autoplay } from 'swiper/modules';
+import SwiperCore from 'swiper';
 import 'swiper/css';
+import 'swiper/css/autoplay';
+import projectsData from '../utils/project.json';
+
+SwiperCore.use([Autoplay]);
 
 const Slider = () => {
     return (
@@ -11,49 +16,34 @@ const Slider = () => {
                 <h2 className='projects'>
                     Projects
                 </h2>
-                <Swiper autoplay={true} slidesPerView={2} loop={true} spaceBetween={50} >
-                    <div className='n'>
-                        <SwiperSlide className='sp'>
+                <Swiper
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: true,
+                    }}
+                    speed={500}
+                    slidesPerView={2}
+                    loop={true}
+                    spaceBetween={50}
+                >
+                    {projectsData.map((project) => (
+                        <SwiperSlide key={project.id} className='sp'>
                             <div className='back'>
                                 <div>
                                     <h3>
-                                        Project 1
+                                        {project.title}
                                     </h3>
-                                    <a target='_blank' href='https://pizza-murex-seven.vercel.app/'>
-                                        Visit Site
-                                    </a >
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide className='sp'>
-                            <div className='back'>
-                                <div>
-                                    <h3>
-                                        Project 2
-                                    </h3>
-                                    <a target='_blank' href='https://calculator-ruby-theta.vercel.app/'>
+                                    <a target='_blank' rel="noopener noreferrer" href={project.url}>
                                         Visit Site
                                     </a>
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide className='sp'>
-                            <div className='back'>
-                                <div>
-                                    <h3>
-                                        Project 3
-                                    </h3>
-                                    <a target='_blank' href='https://to-do-app-eight-kohl.vercel.app/'>
-                                        Visit Site
-                                    </a>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    </div>
+                    ))}
                 </Swiper>
             </div>
         </>
     );
 }
 
-export default Slider
+export default Slider;

@@ -3,23 +3,19 @@
 @import "abot";
 @import "skills";
 @import "slider";
-
+@import "footer";
+@import "home";
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
-
-
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 .container{
     width: 1440px;
     margin: 0 auto;
-    background-color:#2b2929;
+    height: 100%;
     font-family: 'Roboto';
     font-size: 20px;
     
@@ -34,3 +30,8 @@ a{
     text-decoration: none;
     color: white;
 }
+
+
+
+
+
