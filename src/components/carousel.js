@@ -22,9 +22,16 @@ const Slider = () => {
                         disableOnInteraction: true,
                     }}
                     speed={500}
-                    slidesPerView={2}
                     loop={true}
                     spaceBetween={50}
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                        },
+                    }}
                 >
                     {projectsData.map((project) => (
                         <SwiperSlide key={project.id} className='sp'>

@@ -16,7 +16,7 @@ const Footer = () => {
                 </button>
                 <input type='number' placeholder='Phone Number' />
             </div> */}
-            <div>
+            <div className='footer-div'>
                 <ul className='footer-social'>
                     <li>
                         <a target='_blank' href='https://admabbasap@gmail.com'>

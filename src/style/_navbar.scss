@@ -5,6 +5,11 @@
     display: flex;
 }
 
+.menu-bar{
+    margin-top: 37px;
+    margin-left: 370px;
+}
+
 .highlight{
     color: #F2F2F2;
 }
@@ -37,7 +42,7 @@
 }
 
 .nav-logos {
-    width: 400px;
+    width: 500px;
     margin: 38px 0px 0px 163px;
     justify-content: space-around;
     display: flex;
@@ -45,4 +50,22 @@
     a:hover{
         color: rgb(0, 255, 0);
     }
+}
+
+
+@media  screen and (max-width:768px) {
+    .nav-logos{
+        width: 400px;
+        margin-left: 0;
+    }
+
+    .navbar-h1{
+        margin-left: 50px;
+    }
+
+
+    .menu-bar{
+        margin-left: 0;
+    }
+    
 }

@@ -57,34 +57,50 @@
 .projects {
     margin: 105px 0px 82px 141px;
     color: rgb(0, 255, 0);
-    font-size: 40px;
+    font-size: 2.5em;
 }
 
-@media only screen and (max-width: 576px) {
-    .back {
-        width: 100%;
-        height: auto;
+@media screen and (max-width:768px) {
+    .back{
+        filter: grayscale(0%);
+        width: 384px;
+        height: 250px;
+        background-size: cover;
         margin-bottom: 50px;
-        border-radius: 8px;
-        div {
-            width: 100%;
-            margin-top: auto;
-            border-radius: 0px 0px 8px 8px;
-
-            h3,
-            a {
-                margin: 10px;
+        div{
+            opacity: 1;
+            margin-top: 200px;
+            background-color: #4c4c4c00;
+            h3{
+                opacity: 0;
+            }
+            a{
+                color: green;
+                opacity: 1;
             }
         }
     }
-
-    .swiper {
-        
+    .projects{
+        font-size: 2em;
+        margin: 30px 0px 30px 50px;
     }
+    
+}
 
-    .projects {
-        margin: 50px 20px;
-        font-size: 24px;
-        text-align: center;
+@media screen and (max-width:467px) 
+{
+    .back{
+        width: 300px;
+        margin-bottom: 50px;
+        div{
+            a{
+                width: 100px;
+                margin-left: 75px;
+            }
+        }
+    }
+    .projects{
+        font-size: 2em;
+        margin-left: 50px;
     }
 }

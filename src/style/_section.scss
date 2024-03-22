@@ -86,3 +86,59 @@
     }
 }
 
+
+@media screen and (max-width:768px) {
+    .alpha{
+        display: block;
+        margin: 0;
+    }
+
+    .svges{
+        margin: 15px 0px 15px 50px;
+    }
+
+    .sec-container{
+        margin: 0;
+    }
+
+    .typescript{
+        margin-left: 335px;
+    }
+
+    .oop{
+        margin:50px 0px 15px 50px;
+    }
+}
+
+@media screen and (max-width:467px){
+
+
+    .svges{
+        width: 272.5px;
+        height: 272.5px;
+    }
+
+    svg{
+        width: 46px;
+        height: 46px;
+    }
+
+    .nodejs{
+        margin-top: 18px;
+    }
+
+    .next{
+        margin-top: 18px;
+        margin-left: 150px;
+    }
+
+    .typescript{
+        margin-top: 200px;
+        margin-left: 150px;
+    }
+
+    .logo{
+        margin-top: 200px;
+        margin-left: -240px;
+    }
+}

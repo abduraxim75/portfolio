@@ -1,40 +1,84 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'; // Import NavLink instead of Link
+import { NavLink } from 'react-router-dom';
+import { Dropdown, Space, message } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 
 const Navbar = () => {
+    const onClick = ({ key }) => {
+        message.info(`Click on item ${key}`);
+    };
+
+    const items = [
+        {
+            label: 'Home',
+            key: '4',
+            url: '/'
+        },
+        {
+            label: 'About',
+            key: '5',
+            url: '/about'
+        },
+        {
+            label: 'Skills',
+            key: '6',
+            url: '/skills'
+        },
+        {
+            label: 'Projects',
+            key: '7',
+            url: '/projects'
+        }
+    ];
+
     return (
         <div className="navbar-container">
             <nav className='navbar'>
                 <h1 className='navbar-h1'>
                     Abdura<span className='highlight'>khim</span>
                 </h1>
-                <ul className='navbar-list'>
-                    <li>
-                        <NavLink exact to='/' activeClassName='active'>Home</NavLink> {/* Use NavLink with activeClassName */}
-                    </li>
-                    <li>
-                        <NavLink to="/about" activeClassName='active'>About</NavLink> {/* Use NavLink with activeClassName */}
-                    </li>
-                    <li>
-                        <NavLink to="/skills" activeClassName='active'>Skills</NavLink> {/* Use NavLink with activeClassName */}
-                    </li>
-                    <li>
-                        <NavLink to="/projects" activeClassName='active'>Projects</NavLink> {/* Use NavLink with activeClassName */}
-                    </li>
-                </ul>
                 <div className='nav-logo-bar'>
                     <ul className='nav-logos'>
                         <li>
-                            <a target='_blank' rel="noopener noreferrer" href='https://www.linkedin.com/in/adm-abbasap-b668b125b'>Linkedin</a>
+                            <a target='_blank' rel="noopener noreferrer"
+                                href='https://www.linkedin.com/in/
+                            adm-abbasap-b668b125b'>Linkedin</a>
                         </li>
                         <li>
-                            <a target='_blank' rel="noopener noreferrer" href='https://github.com/abduraxim75'>Github</a>
+                            <a target='_blank' rel="noopener noreferrer"
+                                href='https://github.com/abduraxim75'>Github</a>
                         </li>
                         <li>
-                            <a target='_blank' rel="noopener noreferrer" href='mailto:admabbasap@gmail.com'>Contact Me</a>
+                            <a target='_blank' rel="noopener noreferrer"
+                                href='mailto:admabbasap@gmail.com'>Contact Me</a>
                         </li>
                     </ul>
                 </div>
+                <Dropdown className='menu-bar'
+                    overlay={
+                        <Space direction="vertical">
+                            {items.map(item => {
+                                if (item.hasOwnProperty('url')) {
+                                    return (
+                                        <NavLink key={item.key} to={item.url} activeClassName='active'>
+                                            {item.label}
+                                        </NavLink>
+                                    );
+                                } else {
+                                    return (
+                                        <a key={item.key} onClick={() => onClick(item)}>
+                                            {item.label}
+                                        </a>
+                                    );
+                                }
+                            })}
+                        </Space>
+                    }
+                >
+                    <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                        Menu <DownOutlined />
+                    </a>
+                </Dropdown>
             </nav>
         </div>
     );

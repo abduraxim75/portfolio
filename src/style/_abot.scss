@@ -16,7 +16,11 @@
 
 .about-me{
     color: rgb(0, 255, 0);
-    font-size: 40px;
+    font-size: 2.5em;
+    
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
 }
 
 
@@ -24,7 +28,8 @@
     margin-left: 114px;
     font-family: 'Roboto';
     font-size: 20px;
-    margin-top: 100px;}
+    margin-top: 100px;
+}
 
 
 .frontend-dvp,.skills{
@@ -47,5 +52,73 @@
     margin-bottom: 15px;
 }
 
+@media screen and (max-width:768px) 
+{
+    .about-page{
+        display: block;
+    }
+
+    .about-div{
+        margin-top: 150px;
+        margin-left: 50px;
+        padding-bottom: 30px;
+        
+    }
+    .frontend-dvp,.skills{
+        width: 400px;
+        margin-bottom: 0;
+        
+    }
+    .skills{
+        margin-top: 25px;
+    }
+    .about-me{
+        font-size: 2em;
+    }
+    .about{
+        margin-top: 0;
+        margin-left: 50px;
+    }
+}
 
 
+@media screen and (max-width:467px) 
+{
+    .about-page{
+        display: block;
+    }
+
+    .about-div{
+        margin-top: 150px;
+        margin-left: 50px;
+        
+        
+    }
+    .frontend-dvp,.skills{
+        margin-left: 0;
+        width: 300px;
+        margin-bottom: 0;
+    }
+    .skills{
+        margin-top: 25px;
+        
+    }
+
+    .about-p{
+        width: 300px;
+    }
+
+    .about-me{
+        font-size: 2em;
+    }
+
+    .about{
+        
+        margin-top: 0;
+        margin-left: 50px;
+    }
+
+    .frontend-dvp{
+        margin-top: 20px;
+    }
+}

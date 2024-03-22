@@ -50,3 +50,22 @@
     padding: 50px 0px;
 
 }
+
+@media screen and (max-width:768px){
+    .footer-social{
+        width: 300px;
+        align-items: center;
+        margin: 0 auto;
+        
+    }
+}
+
+@media screen and (max-width:467px){
+    .footer-social{
+        width: 300px;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        
+    }
+}
